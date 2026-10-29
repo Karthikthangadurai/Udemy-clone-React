@@ -8,57 +8,31 @@ import { IoIosSearch } from "react-icons/io";
 
 const Hero = () => {
 
-    const imagesSmall = [herosm1,herosm2];
-
-    const [current, setCurrent] = useState(0);
-
-  // Auto-slide every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % imagesSmall.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [imagesSmall.length]);
-
-  const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + imagesSmall.length) % imagesSmall.length);
-  };
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % imagesSmall.length);
-  };
-    const imagesBig = [hero1,hero2];
-
 
   return (
     <section className="xl:w-[88%] mx-auto">
       <div className="relative">
         
         {/* Small Screen Image */}
-        <div className="flex md:hidden transition-transform duration-1000 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}>
+        <div className="flex md:hidden transition-transform duration-1000 ease-in-out">
         
-        {imagesSmall.map((src, index) => (
-          <img key={index} src={src} alt={`slide-${index}`} className="w-full shrink-0" />
-        ))}
+          <img src={herosm1} alt="small images" className="w-full shrink-0" />
         </div>
 
         {/* Big Screen Image */}
-        <div className="hidden md:flex transition-transform duration-1000 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}>
+        <div className="hidden md:flex transition-transform duration-1000 ease-in-out">
 
-         {imagesBig.map((src, index) => (
-          <img key={index} src={src} alt={`slide-${index}`} className="w-full shrink-0" />
-        ))}
+          <img src={hero1} alt="big Images" className="w-full shrink-0" />
+      
         </div>
 
         {/* Left Button */}
-        <button onClick={prevSlide} className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
+        <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
           <ChevronLeft />
         </button>
 
         {/* Right button */}
-        <button onClick={nextSlide} className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
+        <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
           <ChevronRight />
         </button>
 
