@@ -4,7 +4,7 @@ import image1 from "../assets/images/agentic track.webp";
 
 const Courses = () => {
   return (
-    <section className="relative xl:w-[88%] mx-auto">
+    <section className="relative xl:w-[88%] mx-auto my-20">
         <h1 className='text-3xl font-semibold'>Trending Courses </h1>
         <div className='my-5 flex justify-between items-center gap-5'>
             <a href="#">
