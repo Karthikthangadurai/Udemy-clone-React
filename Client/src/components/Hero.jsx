@@ -10,7 +10,7 @@ const Hero = () => {
 
 
   return (
-    <section className="xl:w-[88%] mx-auto">
+    <section className="xl:w-[88%] mx-auto h-screen">
       <div className="relative">
         
         {/* Small Screen Image */}
