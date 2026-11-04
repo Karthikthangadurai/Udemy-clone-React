@@ -7,8 +7,8 @@ import image1 from "../assets/images/data-science.webp";
 const Slidebar = () => {
   return (
     <section className="w-[88%] mx-auto my-10">
-      <div className="flex gap-5 ">
-        <div className="flex flex-col justify-center p-2 w-[25%]">
+      <div className="flex flex-col md:flex-row gap-5 ">
+        <div className="flex flex-col justify-center p-2 md:w-[25%]">
           <h2 className="text-3xl font-semibold">
             Learn <em>essential</em> career and <b>life</b> skills
           </h2>
@@ -18,7 +18,7 @@ const Slidebar = () => {
           </p>
         </div>
         <div className="space-y-6">
-          <div className="relative flex items-center gap-4 w-[31%] cursor-pointer">
+          <div className="relative flex items-center gap-4 flex-wrap md:flex-nowrap md:w-[31%] cursor-pointer">
             <img src={logo} alt="image" className=" rounded-lg h-96" />
             <img src={image} alt="image" className="rounded-lg h-96"/>
             <img src={image1} alt="image" className="rounded-lg h-96"/>

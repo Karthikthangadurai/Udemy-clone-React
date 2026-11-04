@@ -10,33 +10,45 @@ const Hero = () => {
 
 
   return (
-    <section className="xl:w-[88%] mx-auto h-screen">
+    <section className="xl:w-[88%] mx-auto">
       <div className="relative">
         
         {/* Small Screen Image */}
-        <div className="flex md:hidden transition-transform duration-1000 ease-in-out">
+        <div className="inline-block md:hidden">
         
-          <img src={herosm1} alt="small images" className="w-full shrink-0" />
-        </div>
+          <img src={herosm1} alt="small images" className="relative w-full" />
 
-        {/* Big Screen Image */}
-        <div className="hidden md:flex transition-transform duration-1000 ease-in-out">
-
-          <img src={hero1} alt="big Images" className="w-full shrink-0" />
-      
-        </div>
-
-        {/* Left Button */}
-        <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
+          {/* Left Button */}
+        <button className="absolute top-44 left-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
           <ChevronLeft />
         </button>
 
         {/* Right button */}
-        <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
+        <button className="absolute top-1 right-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
           <ChevronRight />
         </button>
+        </div>
 
-        <div className="absolute md:top-16 md:left-18 md:w-[32%] bg-white rounded p-7">
+        {/* Big Screen Image */}
+        <div className=" relative hidden md:inline-block">
+
+          <img src={hero1} alt="big Images" className="w-full" />
+
+              {/* Left Button */}
+        <button className="absolute top-48 left-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
+          <ChevronLeft />
+        </button>
+
+        {/* Right button */}
+        <button className="absolute top-48 right-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100">
+          <ChevronRight />
+        </button>
+      
+        </div>
+
+    
+
+        <div className="md:absolute md:top-16 md:left-18 md:w-[32%] bg-white rounded p-7 z-1 text-center md:text-start">
           <h2 className="text-2xl md:text-3xl font-semibold">
             Meet your career sidekick.
           </h2>

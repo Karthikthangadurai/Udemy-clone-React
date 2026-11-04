@@ -12,8 +12,8 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      {/* <Slidebar />
-      <Courses/> */}
+      <Slidebar />
+      <Courses/>
       <SubscriptionCard/>
     </>
   );
