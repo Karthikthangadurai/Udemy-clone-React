@@ -58,10 +58,16 @@ const Navbar = () => {
         <div className="hidden xl:inline-block text-sm cursor-pointer p-3 rounded-lg hover:bg-gray-100 hover:text-violet-700">
           <a href="#">Teach on Udemy</a>
         </div>
-        <div className="hidden md:inline-block p-3 rounded-lg text-black/75 cursor-pointer hover:bg-gray-100 hover:text-violet-600">
+        <div className="hidden md:inline-block relative ">
+          <div className="p-3 rounded-lg text-black/75 cursor-pointer hover:bg-gray-100 hover:text-violet-600">
           <a href="#">
             <MdOutlineShoppingCart size={20} />
           </a>
+          </div>
+          <div className="absolute top-14 right-0 rounded-lg border border-gray-300 shadow w-72 h-24 text-center bg-white">
+            <p className="my-3 text-gray-400">Your cart is empty.</p>
+            <a href="#" className="font-semibold text-violet-600">Keep shopping</a>
+          </div>
         </div>
         <div className="hidden md:inline-block text-sm">
           <button className="px-3 lg:px-4 py-2 font-bold text-violet-600 border border-violet-700 rounded-lg cursor-pointer hover:bg-gray-100 ">
