@@ -1,15 +1,30 @@
 import React from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import logo from "../assets/images/generative-ai.webp";
-import image from "../assets/images/certifications.webp";
-import image1 from "../assets/images/data-science.webp";
+import image1 from "../assets/images/generative-ai.webp";
+import image2 from "../assets/images/certifications.webp";
+import image3 from "../assets/images/data-science.webp";
+
+const Links = [
+  {
+    image: image1,
+    buttonText: "Generative AI",
+  },
+  {
+    image: image2,
+    buttonText: "IT Certifications",
+  },
+  {
+    image: image3,
+    buttonText: "Data Science",
+  },
+];
 
 const Slidebar = () => {
   return (
-    <section className="w-[88%] mx-auto my-10">
+    <section className="w-[85%] mx-auto my-10">
       <div className="flex flex-col md:flex-row gap-5 ">
-        <div className="flex flex-col justify-center p-2 md:w-[25%]">
-          <h2 className="text-3xl font-semibold">
+        <div className="flex flex-col justify-center gap-1 md:w-[33%]">
+          <h2 className="text-4xl font-semibold">
             Learn <em>essential</em> career and <b>life</b> skills
           </h2>
           <p className="text-black/85 font-light mt-2">
@@ -18,16 +33,18 @@ const Slidebar = () => {
           </p>
         </div>
         <div className="space-y-6">
-          <div className="relative flex items-center gap-4 flex-wrap md:flex-nowrap md:w-[31%] cursor-pointer">
-            <img src={logo} alt="image" className=" rounded-lg h-96" />
-            <img src={image} alt="image" className="rounded-lg h-96"/>
-            <img src={image1} alt="image" className="rounded-lg h-96"/>
-            <div className="absolute bottom-4 left-5 flex gap-28 items-center p-4 cursor-pointer bg-white shadow rounded-2xl hover:shadow-xl">
-              <button className="bg-white mb-8 text-xl">Generative AI</button>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
+          {Links.map((link,index) => (
+          <div key={index} className="relative cursor-pointer">
+            <img src={link.image} alt="image" className=" rounded-lg h-96" />
+            <div className="absolute bottom-4 left-5 flex items-center gap-20 p-4 cursor-pointer bg-white shadow rounded-2xl hover:shadow-xl">
+              <button className="bg-white mb-8 text-lg">{link.buttonText}</button>
               <button className=" bg-white mt-8 font-light">
                 <ArrowRight size={18}/>
               </button>
             </div>
+          </div>
+          ))}
           </div>
 
           <div className="flex gap-7 justify-center items-center">
