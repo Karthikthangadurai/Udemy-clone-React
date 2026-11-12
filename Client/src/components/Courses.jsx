@@ -84,8 +84,8 @@ const Courses = () => {
 
         <div className='my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
             {Course.map((course,index) =>(
-            <a href="#">
-            <div key={index} className='border border-gray-200 shadow rounded-2xl p-5 hover:bg-gray-100'>
+            <a href="#" key={index}>
+            <div className='border border-gray-200 shadow rounded-2xl p-5 hover:bg-gray-100'>
                 <img src={course.image} alt="image" className='w-72 rounded-lg'/>
                 <h2 className='text-lg font-semibold mt-2'>{course.title}</h2>
                 <p className='text-xs text-black/50 mb-2'>{course.tutor}</p>

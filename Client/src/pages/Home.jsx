@@ -5,6 +5,7 @@ import Slidebar from '../components/Slidebar'
 import Courses from '../components/Courses'
 import SubscriptionCard from '../components/SubscriptionCard'
 import Footer from '../components/Footer'
+import Career from '../components/Career'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
     <Slidebar/>
     <Courses/>
     <SubscriptionCard/>
+    <Career/>
     <Footer/>
     </>
   )
