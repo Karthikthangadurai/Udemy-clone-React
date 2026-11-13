@@ -6,6 +6,7 @@ import Courses from '../components/Courses'
 import SubscriptionCard from '../components/SubscriptionCard'
 import Footer from '../components/Footer'
 import Career from '../components/Career'
+import PopularSkills from '../components/PopularSkills'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
     <Courses/>
     <SubscriptionCard/>
     <Career/>
+    <PopularSkills/>
     <Footer/>
     </>
   )

@@ -15,32 +15,32 @@ const Course = [
         image: image1,
         title:"AI Engineer Agentic Track: The Complete Agent & MCP Course",
         tutor:"Ed Donner,Ligency",
-        star:"4.7",
-        ratings:"50,851 ratings",
+        sale:"Bestseller",
+        ratings:["⭐ 4.7", "50,851 ratings"],
         fees:"459.00"
     },
     {
         image: image2,
         title:"AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents",
         tutor:"Ligency, Ed Donner",
-        star:"4.7",
-        ratings:"44,898 ratings",
+        sale:"Bestseller",
+        ratings:["⭐ 4.7", "44,898 ratings"],
         fees:"3,289.00",
     },
     {
         image: image3,
         title:"The Complete Claude Code & Claude Cowork Materclass [2026]",
         tutor:"Prof. Ryan Ahmed, PhD, MBA, Stemplicity Inc.",
-        star:"4.5",
-        ratings:"11,999 ratings",
+        sale:"Bestseller",
+        ratings:["⭐ 4.5", "11,999 ratings"],
         fees:"799.00",
     },
     {
         image: image4,
         title:"100 Days of Code TM: The Complete Python Pro Bootcamp",
         tutor:"Dr. Angela Yu, Developer and Lead Instructor",
-        star:"4.7",
-        ratings:"439,734 ratings",
+        sale:"Bestseller",
+        ratings:["⭐ 4.7", "439,734 ratings"],
         fees:"3,199.00",
     },
     // {
@@ -88,20 +88,16 @@ const Courses = () => {
             <div className='border border-gray-200 shadow rounded-2xl p-5 hover:bg-gray-100'>
                 <img src={course.image} alt="image" className='w-72 rounded-lg'/>
                 <h2 className='text-lg font-semibold mt-2'>{course.title}</h2>
-                <p className='text-xs text-black/50 mb-2'>{course.tutor}</p>
-                <div className='flex items-center gap-2 my-4'>
-                    <p className='bg-[#C2E9EB] text-sm font-semibold py-1 px-2 rounded'>Bestseller</p>
-                    <p className='border border-gray-300 text-black/60 text-xs font-semibold py-1 px-2 rounded'><span className='text-sm font-bold text-orange-700'> ★</span> <span>{course.star}</span></p>
-                    <p className='border border-gray-300 text-black/60 text-xs font-semibold py-1.5 px-2 rounded'>{course.ratings}</p>
-                </div>
+                <p className='text-xs text-black/50 mb-5'>{course.tutor}</p>
+                <ul className='flex items-center gap-1 my-4'>
+                    <li className='border border-gray-300 rounded px-2 py-0.5 text-[13px] font-bold bg-[#C2E9EB] text-[#0D5261]'>{course.sale}</li>
+                    {course.ratings.map((score,i) => (
+                    <li key={i} className='border border-gray-300 rounded px-1 py-0.5 text-[13px] text-gray-600'>{score}</li>
+                    ))}
+                </ul>
                 <div className='flex justify-between items-center gap-2'>
-                    <div className='flex items-center gap-2'>
                         <p className='font-semibold'>&#8377;{course.fees}</p>
-                        <del className='text-gray-500 font-light'>&#8377;799.00</del>
-                    </div>
-                    <div>
                         <button className='text-purple-800 text-sm font-bold border py-1.5 px-3 border-purple-700 rounded-lg cursor-pointer hover:bg-gray-200'>Add to cart</button>
-                    </div>
                 </div>
             </div>
             </a> 
