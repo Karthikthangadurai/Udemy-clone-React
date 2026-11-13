@@ -64,7 +64,7 @@ const Navbar = () => {
             <MdOutlineShoppingCart size={20} />
           </a>
           </div>
-          <div className="absolute top-14 right-0 rounded-lg border border-gray-300 shadow w-72 h-24 text-center bg-white">
+          <div className="hidden absolute top-14 right-0 rounded-lg border border-gray-300 shadow w-72 h-24 text-center bg-white">
             <p className="my-3 text-gray-400">Your cart is empty.</p>
             <a href="#" className="font-semibold text-violet-600">Keep shopping</a>
           </div>
