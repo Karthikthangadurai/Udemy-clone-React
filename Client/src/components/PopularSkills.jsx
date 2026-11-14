@@ -1,5 +1,13 @@
 import React from "react";
 import GoogleLogo from "../assets/images/Googlelogo.png";
+import Ai1 from "../assets/images/AI1.webp";
+import Ai2 from "../assets/images/AI2.webp";
+import Ai3 from "../assets/images/AI3.webp";
+import Ai4 from "../assets/images/AI4.webp";
+import Ai5 from "../assets/images/AI5.webp";
+import Ai6 from "../assets/images/AI6.webp";
+import Ai7 from "../assets/images/AI7.webp";
+import Ai8 from "../assets/images/AI8.webp";
 import { ChevronRight } from "lucide-react";
 
 const Skills = [
@@ -41,6 +49,49 @@ const Skills = [
   },
 ];
 
+const AiSkills = [
+    {
+      image: Ai1,
+      title: "AI Fundamentals",
+      course:["Course 1 of 8", "1.2 hours"],
+    },
+    {
+      image: Ai2,
+      title: "AI for Brainstorming and Planning",
+      course:["Course 2 of 8", "22 mins"],
+    },
+    {
+      image: Ai3,
+      title: "AI for Research and Insights",
+      course:["Course 3 of 8", "26 mins"],
+    },
+    {
+      image: Ai4,
+      title: "AI for Writing and Communicating",
+      course:["Course 4 of 8", "30 mins"],
+    },
+    // {
+    //   image: Ai5,
+    //   title: "AI for Content Creation",
+    //   course:["Course 5 of 8", "34 mins"],
+    // },
+    // {
+    //   image: Ai6,
+    //   title: "AI for Data Analysis",
+    //   course:["Course 6 of 8", "34 mins"],
+    // },
+    // {
+    //   image: Ai7,
+    //   title: "AI for App Building",
+    //   course:["Course 7 of 8", "52 mins"],
+    // },
+    // {
+    //   image: Ai8,
+    //   title: "AI for App Deployment",
+    //   course:["Course 8 of 8", "51 mins"],
+    // },
+];
+
 const PopularSkills = () => {
   return (
     <>
@@ -56,12 +107,12 @@ const PopularSkills = () => {
               </h2>
               <a
                 href="#"
-                className="flex items-center gap-1 text-lg font-bold text-violet-700"
+                className="flex items-center gap-1 text-lg font-bold text-violet-800"
               >
                 See ChatGPT courses <ChevronRight size={16} />
               </a>
               <p className="text-gray-400 text-sm py-1">5,628,327 learners</p>
-              <button className="my-7 px-16 py-2 border border-violet-500 rounded-lg text-violet-700 font-semibold cursor-pointer hover:bg-gray-200">
+              <button className="my-7 px-16 py-2 border border-violet-500 rounded-lg text-violet-800 font-semibold cursor-pointer hover:bg-gray-200">
                 Show all trending skills ↝
               </button>
             </div>
@@ -72,7 +123,7 @@ const PopularSkills = () => {
                   <div key={i} className="my-3">
                     <a
                       href={learn.href}
-                      className="flex items-center gap-1 text-lg font-bold text-violet-700"
+                      className="flex items-center gap-1 text-lg font-bold text-violet-800"
                     >
                       {learn.skill} <ChevronRight size={16} />
                     </a>
@@ -90,9 +141,9 @@ const PopularSkills = () => {
       {/* Learn AI with Google */}
       <div className="w-[86%] mx-auto">
         <h2 className="text-4xl font-semibold">Learn AI with Google</h2>
-        <div className="bg-[#0B3E4A] my-7 p-5 rounded-2xl">
+        <div className="bg-[#0D5F6B] my-7 p-5 rounded-2xl grid grid-cols-[1fr_3fr] gap-5">
             <a href="#">
-          <div className="bg-white p-4 rounded-lg w-[26%] hover:bg-gray-100">
+          <div className="bg-white p-4 rounded-lg hover:bg-gray-100">
             <img src={GoogleLogo} alt="GoogleLogo" className="w-18" />
             <h3 className="mt-3 text-2xl font-semibold">
               Google AI Professional Certificate
@@ -119,8 +170,25 @@ const PopularSkills = () => {
             </button>
           </div>
         </a>
-          <div></div>
+          <div className="relative grid grid-cols-4 items-end gap-4">
+            {AiSkills.map((aiskill,j) => (
+            <div key={j} className="bg-white p-4 rounded-xl h-62 hover:bg-gray-100 cursor-pointer flex flex-col justify-between">
+              <div>
+                <img src={aiskill.image} alt={aiskill.title} className="rounded-xl" />
+                <h3 className="my-2 text-lg font-semibold">{aiskill.title}</h3>
+              </div>
+              <ul className="text-xs text-gray-500 flex items-center gap-1 ">
+                {aiskill.course.map((data,k) => (
+                <li key={k} className="px-1 py-0.5 border border-gray-300 rounded">{data}</li>
+                ))}
+              </ul>
+            </div>
+            ))}
 
+            <div className="absolute top-42 -right-4 p-2 bg-white rounded-full shadow border border-gray-200 hover:bg-gray-100 cursor-pointer">
+                 <span><ChevronRight size={16} /></span>
+            </div>
+          </div>
         </div>
       </div>
     </>
