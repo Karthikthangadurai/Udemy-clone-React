@@ -5,6 +5,9 @@ import Card1 from "../assets/images/card1.webp";
 import Card2 from "../assets/images/card2.webp";
 import Card3 from "../assets/images/card3.webp";
 import Card4 from "../assets/images/card4.webp";
+import Certificate1  from "../assets/images/certi1.webp";
+import Certificate2  from "../assets/images/certi2.webp";
+import Certificate3  from "../assets/images/certi3.webp";
 
 const CardLists = [
     {
@@ -29,6 +32,24 @@ const CardLists = [
     },
 ];
 
+const Certificate = [
+    {
+        image: Certificate1,
+        title: "CompTIA",
+        desc: "Cloud, Networking, Cybersecurity"
+    },
+    {
+        image: Certificate2,
+        title: "AWS",
+        desc: "Cloud, AI, Coding, Networking"
+    },
+    {
+        image: Certificate3,
+        title: "PMI",
+        desc: "Project & Program Management"
+    },
+];
+
 const Card = () => {
   return (
     <>
@@ -38,7 +59,7 @@ const Card = () => {
             {CardLists.map((list,index) => (
             <div key={index} className='p-7 border border-gray-300 rounded-lg flex flex-col justify-between gap-1 '>
                 <div>
-               <span> <RiDoubleQuotesL  size={28}/></span>
+               <span> <RiDoubleQuotesL  size={26}/></span>
                <p className='my-2 font-light text-sm'>{list.desc}</p>
                </div>
                <div>
@@ -49,12 +70,31 @@ const Card = () => {
                         <p>{list.author.work}</p>
                         </div>
                     </div>
-                    <a href="" className='flex items-center gap-1 font-light text-violet-700'><span>{list.course}</span> <span><ChevronRight size={14} /></span></a>
+                    <a href="#" className='flex items-center gap-1 font-light text-violet-700'><span>{list.course}</span> <span><ChevronRight size={14} /></span></a>
                 </div>
             </div>
             ))}
         </div>
         <a href="#" className='px-1 py-2 w-fit flex items-center gap-1 text-violet-700 rounded-lg hover:bg-gray-100'><span className='font-semibold'>View all stories</span> <span><ArrowRight size={14}/></span></a>
+    
+     {/* Certification Card */}
+        <div className='bg-[#202230] my-10 p-20 rounded-2xl text-white flex justify-between items-center gap-5 '>
+            <div> 
+                <h2 className='text-3xl font-semibold'>Get certified and get ahead in your career</h2>
+                <p className='py-3 font-semibold'>Prep for certifications with comprehensive courses, practice tests, and special offers on exam vouchers.</p>
+                <a href="#" className='font-bold flex items-center gap-2'>Explore certifications and vouchers <span><ArrowRight size={18} /></span></a>
+            </div>
+            <div className='flex justify-between items-center gap-5'>
+            {Certificate.map((data,index) => (
+            <div key={index} className='p-5 bg-gray-700 rounded-2xl'>
+                <img src={data.image} alt={data.title} className='rounded-xl'/>
+                <h3 className='py-2 text-lg font-semibold'>{data.title}</h3>
+                <p className='text-xs text-gray-400'>{data.desc}</p>
+            </div>
+            ))}
+            </div>
+        </div>
+    
     </section>
     </>
   )
