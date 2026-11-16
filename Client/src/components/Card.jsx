@@ -78,15 +78,15 @@ const Card = () => {
         <a href="#" className='px-1 py-2 w-fit flex items-center gap-1 text-violet-700 rounded-lg hover:bg-gray-100'><span className='font-semibold'>View all stories</span> <span><ArrowRight size={14}/></span></a>
     
      {/* Certification Card */}
-        <div className='bg-[#202230] my-10 p-20 rounded-2xl text-white flex justify-between items-center gap-5 '>
+        <div className='bg-[#202230] my-10 p-28 rounded-2xl text-white grid grid-cols-[1fr_2fr] items-center gap-5 '>
             <div> 
                 <h2 className='text-3xl font-semibold'>Get certified and get ahead in your career</h2>
-                <p className='py-3 font-semibold'>Prep for certifications with comprehensive courses, practice tests, and special offers on exam vouchers.</p>
-                <a href="#" className='font-bold flex items-center gap-2'>Explore certifications and vouchers <span><ArrowRight size={18} /></span></a>
+                <p className='py-3 mb-5 font-semibold'>Prep for certifications with comprehensive courses, practice tests, and special offers on exam vouchers.</p>
+                <a href="#" className='font-bold flex items-center gap-2 w-fit px-1 py-3 rounded-lg hover:bg-gray-700/25'>Explore certifications and vouchers <span><ArrowRight size={18} /></span></a>
             </div>
-            <div className='flex justify-between items-center gap-5'>
+            <div className='flex items-center gap-4'>
             {Certificate.map((data,index) => (
-            <div key={index} className='p-5 bg-gray-700 rounded-2xl'>
+            <div key={index} className='p-5 bg-gray-700 rounded-2xl cursor-pointer hover:bg-gray-600'>
                 <img src={data.image} alt={data.title} className='rounded-xl'/>
                 <h3 className='py-2 text-lg font-semibold'>{data.title}</h3>
                 <p className='text-xs text-gray-400'>{data.desc}</p>
