@@ -18,13 +18,13 @@ const Skills = () => {
             <h2 className='text-4xl font-semibold'>Skills to transform your career and life </h2>
             <p className='my-2 text-lg text-gray-500'>From critical workplace skills to technical topics, Udemy supports your professional development.</p>
             <div>
-                <ul className='py-2 flex items-center gap-7 text-gray-600 border-b border-b-gray-300'>
-                <li>Artificial Intelligence (AI)</li>
-                <li>Python</li>
-                <li>Microsoft Excel</li>
-                <li>AI Agents & Agentic AI</li>
-                <li>Digital Marketing</li>
-                <li>Amazon AWS</li>
+                <ul className='font-semibold flex items-center gap-7 text-gray-600 border-b border-b-gray-300'>
+                    <li className='hover:text-black hover:border-b-2 hover:border-b-violet-600 py-2 cursor-pointer'>Artificial Intelligence (AI)</li>
+                    <li className='hover:text-black hover:border-b-2 hover:border-b-violet-600 py-2 cursor-pointer'>Python</li>
+                    <li className='hover:text-black hover:border-b-2 hover:border-b-violet-600 py-2 cursor-pointer'>Microsoft Excel</li>
+                    <li className='hover:text-black hover:border-b-2 hover:border-b-violet-600 py-2 cursor-pointer'>AI Agents & Agentic AI</li>
+                    <li className='hover:text-black hover:border-b-2 hover:border-b-violet-600 py-2 cursor-pointer'>Digital Marketing</li>
+                    <li className='hover:text-black hover:border-b-2 hover:border-b-violet-600 py-2 cursor-pointer'>Amazon AWS</li>
                 </ul>
          </div>
         </section>
