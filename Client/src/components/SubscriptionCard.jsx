@@ -98,11 +98,16 @@ const SubscriptionCard = () => {
               </span>
             </li>
           </ul>
-          <button className="bg-white text-blue-950 font-bold px-12 py-2 mb-2 rounded-xl cursor-pointer hover:bg-white/95 w-full lg:w-fit">Subscribe now</button><br />
-          <a href="#" className="underline font-semibold ">Learn more</a>
+          <button className="bg-white text-blue-950 font-bold px-12 py-2 mb-2 rounded-xl cursor-pointer hover:bg-white/95 w-full lg:w-fit">
+            Subscribe now
+          </button>
+          <br />
+          <a href="#" className="underline font-semibold ">
+            Learn more
+          </a>
         </div>
         <div className="content-center">
-          <img src={image} alt="SubscriptionImage" className="w-full h-full"/>
+          <img src={image} alt="SubscriptionImage" className="w-full h-full" />
         </div>
       </section>
     </>

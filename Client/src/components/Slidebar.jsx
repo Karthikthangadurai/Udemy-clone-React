@@ -34,17 +34,23 @@ const Slidebar = () => {
         </div>
         <div className="space-y-6">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
-          {Links.map((link,index) => (
-          <div key={index} className="relative cursor-pointer">
-            <img src={link.image} alt="image" className=" rounded-lg h-96" />
-            <div className="absolute bottom-4 left-5 flex items-center gap-20 p-4 cursor-pointer bg-white shadow rounded-2xl hover:shadow-xl">
-              <button className="bg-white mb-8 text-lg">{link.buttonText}</button>
-              <button className=" bg-white mt-8 font-light">
-                <ArrowRight size={18}/>
-              </button>
-            </div>
-          </div>
-          ))}
+            {Links.map((link, index) => (
+              <div key={index} className="relative cursor-pointer">
+                <img
+                  src={link.image}
+                  alt="image"
+                  className=" rounded-lg h-96"
+                />
+                <div className="absolute bottom-4 left-5 flex items-center gap-20 p-4 cursor-pointer bg-white shadow rounded-2xl hover:shadow-xl">
+                  <button className="bg-white mb-8 text-lg">
+                    {link.buttonText}
+                  </button>
+                  <button className=" bg-white mt-8 font-light">
+                    <ArrowRight size={18} />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="flex gap-7 justify-center items-center">
