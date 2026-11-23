@@ -70,10 +70,10 @@ const Card = () => {
   return (
     <>
       <section className="w-[86%] mx-auto my-10">
-        <h2 className="text-2xl font-semibold py-7">
+        <h2 className="text-xl md:text-2xl font-semibold py-7">
           Join others transforming their lives through learning
         </h2>
-        <div className="mb-5 grid grid-cols-4 gap-4">
+        <div className="mb-5 grid  md:grid-cols-2 lg:grid-cols-4 gap-4">
           {CardLists.map((list, index) => (
             <div
               key={index}
@@ -87,7 +87,7 @@ const Card = () => {
                 <p className="my-2 font-light text-sm">{list.desc}</p>
               </div>
               <div>
-                <div className="my-5 flex items-center gap-2">
+                <div className="my-5 flex flex-col xl:flex-row xl:items-center gap-2">
                   <div>
                     <img
                       src={list.author.image}
@@ -97,7 +97,7 @@ const Card = () => {
                     />
                   </div>
                   <div className="text-xs text-gray-400">
-                    <p className="py-1">{list.author.name}</p>
+                    <p className="py-1 font-bold text-black">{list.author.name}</p>
                     <p>{list.author.work}</p>
                   </div>
                 </div>
@@ -125,12 +125,12 @@ const Card = () => {
         </a>
 
         {/* Certification Card */}
-        <div className="bg-[#202230] my-10 p-28 rounded-2xl text-white grid grid-cols-[1fr_2fr] items-center gap-5 ">
+        <div className="bg-[#202230] my-10 p-5 xl:p-28 rounded-2xl text-white grid lg:grid-cols-[1fr_2fr] items-center gap-5 ">
           <div>
-            <h2 className="text-3xl font-semibold">
+            <h2 className="text-2xl md:text-[28px] lg:text-3xl font-semibold">
               Get certified and get ahead in your career
             </h2>
-            <p className="py-3 mb-5 font-semibold">
+            <p className="py-3 mb-5 lg:font-semibold">
               Prep for certifications with comprehensive courses, practice
               tests, and special offers on exam vouchers.
             </p>
@@ -144,7 +144,7 @@ const Card = () => {
               </span>
             </a>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row  items-center gap-4">
             {Certificate.map((data, index) => (
               <div
                 key={index}
