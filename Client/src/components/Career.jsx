@@ -32,7 +32,7 @@ const Career = () => {
         Get the skills and real-world experience employers want with Career
         Accelerators.
       </p>
-      <div className="my-7 flex justify-between items-center gap-5">
+      <div className="my-7 flex flex-col md:flex-row justify-between items-center gap-5">
         {Links.map((link, index) => (
           <a key={index} href="#">
             <div className="p-5 border border-gray-200 rounded-2xl hover:bg-gray-100">
