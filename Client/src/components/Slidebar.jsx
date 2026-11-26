@@ -21,10 +21,10 @@ const Links = [
 
 const Slidebar = () => {
   return (
-    <section className="w-[85%] mx-auto my-10">
+    <section className="w-[95%] xl:w-[85%] mx-auto my-10">
       <div className="flex flex-col md:flex-row gap-5 ">
         <div className="flex flex-col justify-center gap-1 md:w-[33%]">
-          <h2 className="text-4xl font-semibold">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
             Learn <em>essential</em> career and <b>life</b> skills
           </h2>
           <p className="text-black/85 font-light mt-2">
@@ -39,13 +39,13 @@ const Slidebar = () => {
                 <img
                   src={link.image}
                   alt="image"
-                  className=" rounded-lg h-96"
+                  className=" rounded-lg h-60 md:h-96"
                 />
-                <div className="absolute bottom-4 left-5 flex items-center gap-20 p-4 cursor-pointer bg-white shadow rounded-2xl hover:shadow-xl">
-                  <button className="bg-white mb-8 text-lg">
+                <div className="absolute bottom-4 left-5 flex items-center md:gap-8 xl:gap-20 p-2 xl:p-4 cursor-pointer bg-white shadow rounded-2xl hover:shadow-xl">
+                  <button className="bg-white m-4 md:mb-8 md:text-lg">
                     {link.buttonText}
                   </button>
-                  <button className=" bg-white mt-8 font-light">
+                  <button className="hidden md:inline-block bg-white mt-8 font-light">
                     <ArrowRight size={18} />
                   </button>
                 </div>
