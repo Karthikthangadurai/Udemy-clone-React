@@ -41,7 +41,7 @@ const Slidebar = () => {
                   alt="image"
                   className=" rounded-lg h-60 md:h-96"
                 />
-                <div className="absolute bottom-4 left-5 flex items-center md:gap-8 xl:gap-20 p-2 xl:p-4 cursor-pointer bg-white shadow rounded-2xl hover:shadow-xl">
+                <div className="absolute bottom-4 left-5 flex items-center md:gap-8 xl:gap-16 p-2 cursor-pointer bg-white shadow rounded-2xl hover:shadow-xl">
                   <button className="bg-white m-4 md:mb-8 md:text-lg">
                     {link.buttonText}
                   </button>

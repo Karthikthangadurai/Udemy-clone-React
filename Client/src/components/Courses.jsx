@@ -78,17 +78,17 @@ const Course = [
 
 const Courses = () => {
   return (
-    <section className="relative w-[88%] mx-auto my-20">
+    <section className="relative w-[95%] xl:w-[88%] mx-auto my-20">
       <h1 className="text-3xl font-semibold">Trending Courses </h1>
 
-      <div className="my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div className="my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {Course.map((course, index) => (
           <a href="#" key={index}>
             <div className="border border-gray-200 shadow rounded-2xl p-5 hover:bg-gray-100">
-              <img src={course.image} alt="image" className="w-72 rounded-lg" />
-              <h2 className="text-lg font-semibold mt-2">{course.title}</h2>
+              <img src={course.image} alt="image" className=" rounded-lg" />
+              <h2 className="xl:text-lg font-semibold mt-2">{course.title}</h2>
               <p className="text-xs text-black/50 mb-5">{course.tutor}</p>
-              <ul className="flex items-center gap-1 my-4">
+              <ul className="flex items-center gap-1 my-4 flex-wrap">
                 <li className="border border-gray-300 rounded px-2 py-0.5 text-[13px] font-bold bg-[#C2E9EB] text-[#0D5261]">
                   {course.sale}
                 </li>
