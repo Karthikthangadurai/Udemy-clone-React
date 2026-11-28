@@ -62,16 +62,16 @@ const Course = [
 const Skills = () => {
   return (
     <>
-      <section className="w-[86%] mx-auto">
-        <h2 className="text-4xl font-semibold">
+      <section className="w-[86%] mx-auto my-10">
+        <h2 className="text-2xl xl:text-4xl font-semibold">
           Skills to transform your career and life{" "}
         </h2>
-        <p className="my-2 text-lg text-gray-500">
+        <p className="my-2 xl:text-lg text-gray-500">
           From critical workplace skills to technical topics, Udemy supports
           your professional development.
         </p>
         <div>
-          <ul className="font-semibold flex items-center gap-7 text-gray-600 border-b border-b-gray-300">
+          <ul className="font-semibold md:flex items-center gap-7 text-gray-600 border-b border-b-gray-300">
             <li className="hover:text-black hover:border-b-2 hover:border-b-violet-600 py-2 cursor-pointer">
               Artificial Intelligence (AI)
             </li>
@@ -144,15 +144,15 @@ const Skills = () => {
       </section>
 
       {/* Banner */}
-      <section className="bg-gray-100 px-20 py-16 my-10">
+      <section className="bg-gray-100 p-4 xl:px-20 xl:py-16 my-10">
         <div className="w-[86%] mx-auto">
-          <ul className="text-lg text-gray-600 flex justify-center items-center gap-2 pb-5">
-            <li>
+          <ul className="xl:text-lg text-gray-600 text-center lg:flex justify-center items-center gap-2 pb-5">
+            <li className="font-semibold">
               Udemy is trusted by over 17,000 companies and millions of learners
               around the world
             </li>
             <li className="text-violet-700 font-bold">
-              <a href="#" className="flex items-center gap-1">
+              <a href="#" className="flex justify-center items-center gap-1">
                 Try Udemy Business{" "}
                 <span>
                   <ChevronRight size={16} />
@@ -160,7 +160,7 @@ const Skills = () => {
               </a>
             </li>
           </ul>
-          <div className="flex justify-between items-center gap-5 mt-2">
+          <div className="grid grid-cols-4 lg:grid-cols-8 items-center gap-5 mt-2">
             {BannerImages.map((image, index) => (
               <img key={index} src={image} alt="Images" />
             ))}
